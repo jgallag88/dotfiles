@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - copy:
+        src: vim/.vimrc
+        dest: "{{ ansible_env.HOME }}/.vimrc"
+        owner: "{{ ansible_env.USER }}"
+        mode: 0755
