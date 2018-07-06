@@ -6,3 +6,13 @@
         dest: "{{ ansible_env.HOME }}/.vimrc"
         owner: "{{ ansible_env.USER }}"
         mode: 0755
+
+    - lineinfile:
+        path: "{{ ansible_env.HOME }}/.bashrc"
+        create: yes
+        line: 'source ~/.bashrc-exts'
+    - copy:
+        src: bashrc/.bashrc-exts
+        dest: "{{ ansible_env.HOME }}/.bashrc-exts"
+        owner: "{{ ansible_env.USER }}"
+        mode: 0755

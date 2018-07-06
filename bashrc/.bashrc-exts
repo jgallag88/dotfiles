@@ -1,0 +1,7 @@
+#
+# Additions to .bashrc, managed by Ansible
+#
+
+export HOMEBREW_NO_ANALYTICS=1
+
+alias cdgitroot='cd "`git rev-parse --show-toplevel`"'
