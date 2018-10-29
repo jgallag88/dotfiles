@@ -16,3 +16,8 @@
         dest: "{{ ansible_env.HOME }}/.bashrc-exts"
         owner: "{{ ansible_env.USER }}"
         mode: 0755
+
+    - git_config:
+        name: core.editor
+        scope: global
+        value: vim
